@@ -1,5 +1,6 @@
 ---
 output: github_document
+bibliography: refs.bib
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,7 +20,9 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/RichardJActon/methylEntropy/branch/master/graph/badge.svg)](https://codecov.io/gh/RichardJActon/methylEntropy?branch=master)
 <!-- badges: end -->
 
-The goal of methylEntropy is to compute shannon entropy for methylation faction values (0-1)
+The goal of methylEntropy is to compute shannon entropy for DNA methylation faction values (0-1)
+
+Example uses of shannon entropy for DNA methylation in the literature [@Hannum2013; @Martin-Herranz2019]
 
 Calculation:
 
@@ -47,3 +50,4 @@ meth <- rbeta(10,1,1)
 methylEntropy(meth)
 ```
 
+# References

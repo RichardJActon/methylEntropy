@@ -11,8 +11,11 @@ status](https://travis-ci.org/RichardJActon/methylEntropy.svg?branch=master)](ht
 coverage](https://codecov.io/gh/RichardJActon/methylEntropy/branch/master/graph/badge.svg)](https://codecov.io/gh/RichardJActon/methylEntropy?branch=master)
 <!-- badges: end -->
 
-The goal of methylEntropy is to compute shannon entropy for methylation
-faction values (0-1)
+The goal of methylEntropy is to compute shannon entropy for DNA
+methylation faction values (0-1)
+
+Example uses of shannon entropy for DNA methylation in the literature
+(Hannum et al. 2013; Martin-Herranz et al. 2019)
 
 Calculation:
 
@@ -41,5 +44,31 @@ library(methylEntropy)
 meth <- rbeta(10,1,1)
 
 methylEntropy(meth)
-#> [1] 0.6558149
+#> [1] 0.8119606
 ```
+
+# References
+
+<div id="refs" class="references">
+
+<div id="ref-Hannum2013">
+
+Hannum, Gregory, Justin Guinney, Ling Zhao, Li Zhang, Guy Hughes,
+SriniVas Sadda, Brandy Klotzle, et al. 2013. “Genome-wide methylation
+profiles reveal quantitative views of human aging rates.” *Molecular
+Cell* 49 (2): 359–67. <https://doi.org/10.1016/j.molcel.2012.10.016>.
+
+</div>
+
+<div id="ref-Martin-Herranz2019">
+
+Martin-Herranz, Daniel E., Erfan Aref-Eshghi, Marc Jan Bonder, Thomas M.
+Stubbs, Sanaa Choufani, Rosanna Weksberg, Oliver Stegle, Bekim
+Sadikovic, Wolf Reik, and Janet M. Thornton. 2019. “Screening for genes
+that accelerate the epigenetic aging clock in humans reveals a role for
+the H3K36 methyltransferase NSD1.” *Genome Biology* 20 (1): 146.
+<https://doi.org/10.1186/s13059-019-1753-9>.
+
+</div>
+
+</div>
