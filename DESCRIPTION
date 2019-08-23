@@ -2,14 +2,16 @@ Package: methylEntropy
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Richard",
+           family = "Acton",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "richardjacton@gmail.com",
+           comment = c(ORCID = "0000-0002-2574-9611"))
+Description: The goal of methylEntropy is to compute shannon entropy for methylation faction values (0-1)
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Suggests: 
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    covr
+RoxygenNote: 6.1.1

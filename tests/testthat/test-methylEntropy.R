@@ -1,8 +1,5 @@
 test_that("methylEntropy works", {
 	set.seed(42)
 	meth <- rbeta(10,1,1)
-
-	#expec
-
-	expect_equal(meth,methylEntropy(meth))
+	expect_equal(0.747310390131265545044, methylEntropy(meth))
 })

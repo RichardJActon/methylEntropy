@@ -15,39 +15,35 @@ knitr::opts_chunk$set(
 # methylEntropy
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/RichardJActon/methylEntropy.svg?branch=master)](https://travis-ci.org/RichardJActon/methylEntropy)
+[![Codecov test coverage](https://codecov.io/gh/RichardJActon/methylEntropy/branch/master/graph/badge.svg)](https://codecov.io/gh/RichardJActon/methylEntropy?branch=master)
 <!-- badges: end -->
 
-The goal of methylEntropy is to ...
+The goal of methylEntropy is to compute shannon entropy for methylation faction values (0-1)
+
+Calculation:
+
+<math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block" id="M1" overflow="scroll"><mrow><mi mathvariant="italic">Entropy</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mi>N</mi><mo>∗</mo><mi>log</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow></mfrac><munder><mo>∑</mo><mi>i</mi></munder><mo>[</mo><mi mathvariant="italic">MFi</mi><mo>∗</mo><mi>log</mi><mo>(</mo><mi mathvariant="italic">MFi</mi><mo>)</mo><mo>+</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi mathvariant="italic">MFi</mi><mo>)</mo><mo>∗</mo><mi>log</mi><mo>(</mo><mn>1</mn><mo>−</mo><mi mathvariant="italic">MFi</mi><mo>)</mo><mo>]</mo></mrow></math>
+
+where MFi is the methylation fraction of the ith methylation marker and N is the number of markers.
 
 ## Installation
 
-You can install the released version of methylEntropy from [CRAN](https://CRAN.R-project.org) with:
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
-install.packages("methylEntropy")
+# install.packages("devtools")
+devtools::install_github("RichardJActon/methylEntropy")
 ```
-
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(methylEntropy)
-## basic example code
+
+meth <- rbeta(10,1,1)
+
+methylEntropy(meth)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
